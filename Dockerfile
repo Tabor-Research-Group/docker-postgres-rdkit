@@ -1,4 +1,4 @@
-FROM tabor-research-group/rdkit:latest as rdkit-env
+FROM tabor-research-group/docker-rdkit:latest as rdkit-env
 
 FROM postgres:12 AS rdkit-postgres-build-env
 
