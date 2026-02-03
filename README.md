@@ -8,7 +8,7 @@ This image inherits from the [official postgres image](https://hub.docker.com/_/
 
 Start Postgres server running in the background:
 
-    docker run --name mypostgres -p 5432:5432 -e POSTGRES_PASSWORD=mypassword -d mcs07/postgres-rdkit
+    docker run --name mypostgres -p 5432:5432 -e POSTGRES_PASSWORD=mypassword -d ghcr.io/tabor-research-group/postgres-rdkit
 
 Or run with an application via Docker Compose:
 
@@ -16,7 +16,7 @@ Or run with an application via Docker Compose:
 services:
 
   db:
-    image: mcs07/postgres-rdkit
+    image: ghcr.io/tabor-research-group/postgres-rdkit
     restart: always
     environment:
       POSTGRES_PASSWORD: mypassword
@@ -43,7 +43,7 @@ See the [official postgres image](https://hub.docker.com/_/postgres/) for more d
 
 ## Building
 
-A multi-stage docker build is used to produce a lightweight production image without all the build dependencies. This image uses [mcs07/rdkit](https://github.com/mcs07/docker-rdkit) as an earlier build stage to provide the RDKit libraries.
+A multi-stage docker build is used to produce a lightweight production image without all the build dependencies. This image uses [tabor-research-group/rdkit](https://github.com/tabor-research-group/docker-rdkit) as an earlier build stage to provide the RDKit libraries.
 
 To build, run:
 
